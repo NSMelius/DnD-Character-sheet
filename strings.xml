@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Basic Character Sheet</string>
+    <string name="title_activity_character_edit">Edit Character</string>
+    <string name="action_settings">Settings</string>
+    <string name="modifier_string">Mod</string>
+    <string name="get_attributes">Roll Attributes</string>
+</resources>

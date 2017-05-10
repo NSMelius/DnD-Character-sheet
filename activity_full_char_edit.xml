@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_full_char_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="melius.nathan.character_sheet.FullCharEdit">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/abc_edit_text_inset_top_material"
+            >
+
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/charactername"
+                android:hint="Character Name"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:editable="true" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Str"
+                android:layout_below="@+id/race_edit"
+                android:layout_alignParentStart="true"
+                android:text="Str"
+                android:editable="true" />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Dex"
+                android:text="Dex"
+                android:layout_below="@+id/enduranceButton"
+                android:layout_alignParentStart="true"
+                android:editable="true" />
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Con"
+                android:text="Con"
+                android:layout_below="@+id/AthleticsButton"
+                android:layout_alignStart="@+id/AthleticsButton"
+                android:editable="true" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/DexMod"
+                android:text="@string/modifier_string"
+                android:layout_below="@+id/enduranceButton"
+                android:layout_toEndOf="@+id/Dex"
+                android:editable="true" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ConMod"
+                android:text="@string/modifier_string"
+                android:layout_below="@+id/AthleticsButton"
+                android:layout_toEndOf="@+id/Con"
+                android:editable="true" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/WisMod"
+                android:text="@string/modifier_string"
+                android:layout_below="@+id/ReligionButton"
+                android:layout_toEndOf="@+id/Wis"
+                android:editable="true" />
+
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Athletics"
+                android:id="@+id/AthleticsButton"
+                android:layout_below="@+id/Str"
+                android:layout_alignParentStart="true"
+                />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acrobatics"
+                android:id="@+id/acrobaticsButton"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/DexMod"
+                android:layout_alignParentLeft="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stealth"
+                android:id="@+id/StealthButton"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/acrobaticsButton"
+                android:layout_alignParentLeft="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thievery"
+                android:id="@+id/ThieveryButton"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/StealthButton"
+                android:layout_alignParentLeft="true" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Endurance"
+                android:id="@+id/enduranceButton"
+                android:layout_below="@+id/Con" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/CharLvl"
+                android:hint="Level"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/class_edit"
+                android:layout_alignEnd="@+id/DungeoneeringButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arcana"
+                android:id="@+id/ArcanaButton"
+                android:layout_below="@+id/Int"
+                android:layout_alignStart="@+id/Int" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heal"
+                android:id="@+id/HealButton"
+                android:layout_below="@+id/Wis"
+                android:layout_alignStart="@+id/HistoryButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nature"
+                android:id="@+id/NatureButton"
+                android:layout_below="@+id/InsightButton"
+                android:layout_alignStart="@+id/InsightButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perception"
+                android:id="@+id/PerceptionButton"
+                android:layout_below="@+id/NatureButton"
+                android:layout_alignStart="@+id/NatureButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bluff"
+                android:id="@+id/BluffButton"
+                android:layout_below="@+id/ChaMod"
+                android:layout_alignStart="@+id/Cha" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diplomacy"
+                android:id="@+id/DiplomacyButton"
+                android:layout_below="@+id/BluffButton"
+                android:layout_alignStart="@+id/BluffButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intimidate"
+                android:id="@+id/IntimidateButton"
+                android:layout_below="@+id/DiplomacyButton"
+                android:layout_alignStart="@+id/DiplomacyButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:id="@+id/HistoryButton"
+                android:layout_below="@+id/ArcanaButton"
+                android:layout_alignStart="@+id/ArcanaButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dungeoneering"
+                android:id="@+id/DungeoneeringButton"
+                android:layout_below="@+id/HistoryButton"
+                android:layout_toEndOf="@+id/charactername" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Insight"
+                android:id="@+id/InsightButton"
+                android:layout_below="@+id/HealButton"
+                android:layout_alignEnd="@+id/HistoryButton" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Fortitude"
+                android:text="Fortitude"
+                android:textSize="16dp"
+                android:textIsSelectable="true"
+                android:enabled="true"
+                android:layout_below="@+id/PerceptionButton"
+                android:layout_alignStart="@+id/PerceptionButton" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Wis"
+                android:text="Wis"
+                android:editable="true"
+                android:layout_below="@+id/ReligionButton"
+                android:layout_alignStart="@+id/ReligionButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Religion"
+                android:id="@+id/ReligionButton"
+                android:layout_below="@+id/DungeoneeringButton"
+                android:layout_alignStart="@+id/InsightButton" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Cha"
+                android:text="Cha"
+                android:editable="true"
+                android:layout_below="@+id/ThieveryButton"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/StrMod"
+                android:text="@string/modifier_string"
+                android:editable="true"
+                android:layout_alignBaseline="@+id/Str"
+                android:layout_alignBottom="@+id/Str"
+                android:layout_toEndOf="@+id/Str" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ChaMod"
+                android:text="@string/modifier_string"
+                android:editable="true"
+                android:layout_alignBaseline="@+id/Cha"
+                android:layout_alignBottom="@+id/Cha"
+                android:layout_alignEnd="@+id/enduranceButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Streetwise"
+                android:id="@+id/StreetwiseButton"
+                android:layout_below="@+id/IntimidateButton"
+                android:layout_alignEnd="@+id/DexMod" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/Int"
+                android:text="Int"
+                android:editable="true"
+                android:layout_below="@+id/class_edit"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Reflex"
+                android:text="Reflex"
+                android:textSize="16dp"
+                android:textIsSelectable="false"
+                android:enabled="true"
+                android:layout_below="@+id/Fortitude"
+                android:layout_alignStart="@+id/Fortitude" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Will"
+                android:text="Will"
+                android:textSize="16dp"
+                android:textIsSelectable="true"
+
+                android:enabled="true"
+                android:layout_alignParentBottom="false"
+                android:layout_alignStart="@+id/DungeoneeringButton"
+                android:layout_marginBottom="11dp"
+                android:layout_below="@+id/Reflex" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/AC"
+                android:text="Armor Class"
+                android:textSize="16dp"
+                android:textIsSelectable="true"
+                android:enabled="true"
+                android:layout_below="@+id/Will"
+                android:layout_alignStart="@+id/Will"
+                android:layout_alignParentBottom="false" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/race_edit"
+                android:editable="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/charactername"
+                android:layout_alignParentLeft="true"
+                android:layout_alignEnd="@+id/charactername"
+                android:hint="Race" />
+
+            <EditText
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/IntMod"
+                android:text="@string/modifier_string"
+                android:editable="true"
+                android:layout_below="@+id/class_edit"
+                android:layout_toEndOf="@+id/Wis" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/class_edit"
+                android:editable="true"
+                android:layout_below="@+id/CharLvl"
+                android:layout_alignParentEnd="true"
+                android:hint="Class"
+                android:layout_toEndOf="@+id/Reflex" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
